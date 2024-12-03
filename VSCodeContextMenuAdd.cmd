@@ -11,7 +11,7 @@ set "iconpath=%resourcesdir%VSCode.ico"
 set "noshellpath=%resourcesdir%noshell.vbs"
 
 :: Remove previous context menu entries
-call "%~dp0VSCodeContextMenuRemove.cmd"
+call "%~dp0VSCodeContextMenuRemove.cmd" > nul 2>&1
 
 
 :: Add context menu

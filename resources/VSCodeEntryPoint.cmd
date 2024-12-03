@@ -18,7 +18,7 @@ set "bin=%localappdata%\Programs\Microsoft VS Code\code.exe"
 
 REM Open the directory with PyCharm
 if exist "%gitdir%\.git" (
-    call "%bin%" "%gitdir%"
+    start "" "%bin%" "%gitdir%"
 ) else (
-    call "%bin%" "%~1"
+    start "" "%bin%" "%~1"
 )
