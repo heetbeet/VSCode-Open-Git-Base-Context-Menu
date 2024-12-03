@@ -25,10 +25,6 @@ $Files = @(
         Destination = Join-Path $BaseDir 'VSCodeContextMenuRemove.cmd'
     },
     @{
-        Url = 'https://raw.githubusercontent.com/heetbeet/VSCode-Open-Git-Base-Context-Menu/refs/heads/master/install-from-github.cmd'
-        Destination = Join-Path $BaseDir 'install-from-github.cmd'
-    },
-    @{
         Url = 'https://raw.githubusercontent.com/heetbeet/VSCode-Open-Git-Base-Context-Menu/refs/heads/master/resources/noshell.vbs'
         Destination = Join-Path $ResourcesDir 'noshell.vbs'
     },
@@ -49,3 +45,9 @@ foreach ($File in $Files) {
 
 # Run the downloaded VSCodeContextMenuAdd.cmd script
 & cmd /c "$(Join-Path $BaseDir 'VSCodeContextMenuAdd.cmd')"
+
+for ($i = 4; $i -ge 1; $i--) {
+    Write-Host -NoNewline "`rDone... $i"
+    Start-Sleep -Seconds 1
+}
+Write-Host "`rDone! "
